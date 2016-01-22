@@ -51,6 +51,22 @@ public class PictureTester
     swan.explore();
   }
   
+  public static void testCropAndCopy()
+  {
+    Picture swan = new Picture("swan.jpg");
+    Picture wall = new Picture("wall.jpg");
+    swan.cropAndCopy(wall,100,200,100,200,100,100);
+    swan.explore();
+  }
+  
+  public static void testCollageLab()
+  {
+    Picture background = new Picture(220,470*4);
+    background.collageLab();
+    background.explore();
+    background.write("Collage Lab.jpg");
+  }
+  
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -66,11 +82,12 @@ public class PictureTester
     //testGrayscale();
     //testFixUnderwater();
     //testMirrorVertical();
-    //testMirrorTemple();
+    testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
-    //testCollage();
+    testCollage();
+    testCollageLab();
     //testCopy();
     //testEdgeDetection();
     //testEdgeDetection2();
